@@ -20,7 +20,7 @@ pages = st.sidebar.selectbox("Escolha:", [
 
 if pages == "📌 Apresentação":
     st.header("Beatriz Silva Pinheiro Rocha")
-    #st.image("arquivos/foto.jpeg", width=400)
+    st.image("arquivos/foto.jpeg", width=400)
     st.write("São Paulo - SP")
     st.markdown("Visite meu LinkedIn: www.linkedin.com/in/beatriz-sp-rocha")
     st.write(
