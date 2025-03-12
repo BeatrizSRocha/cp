@@ -7,7 +7,7 @@ import seaborn as sns
 
 st.set_page_config(page_title="Currículo", layout="centered")
 
-file_path = r"C:\Users\biasr\Downloads\FIAP\FIAP-1\Estatística\cp\arquivos\fortune1000.xlsx"
+file_path = "arquivos/fortune1000.xlsx"
 
 pages = st.sidebar.selectbox("Escolha:", [
     "📌 Apresentação",
@@ -102,21 +102,21 @@ elif pages == "📈 Apresentação dos Dados":
 
     st.markdown("<hr>", unsafe_allow_html=True)
 
-    st.write("Explicação sobre o conjunto de dados utilizado")
-    st.write("Resolvi utilizar esse dataset a fim de mostrar as empresas com o maior número de funcionários.")
+    st.markdown(
+        """
+        **Explicação sobre o conjunto de dados utilizado:** \n
+        Resolvi utilizar esse dataset a fim de mostrar as empresas com o maior número de funcionários. O dataset foi pego em um github público.
+        """
+    )
 
     st.markdown("<hr>", unsafe_allow_html=True)
 
-    st.write("Identificação do tipo de variáveis")
     st.markdown(
         """
-        - **Rank:** Ordinal;
-        - **Company:** Nominal;
-        - **Sector:** Nominal;
-        - **Industry:** Nominal;
-        - **Revenue:** Ordinal;
-        - **Profits:** Contínua;
-        - **Employees:** Discreta.
+        **Perguntas:**
+        - Qual a probabilidade de uma empresa ter um lucro acima de 7 bilhões?
+        - Em quais cenários seria mais adequado usar a distribuição binomial em vez da normal?
+        - Qual a probabilidade de exatamente 5 delas serem lucrativas?
         """
     )
 
@@ -125,9 +125,9 @@ elif pages == "📈 Apresentação dos Dados":
     df = pd.read_excel(file_path, engine="openpyxl")
     st.write(df)
 
-    st.write("Identificação do tipo de variáveis")
     st.markdown(
         """
+        **Identificação do tipo de variáveis:**
         - **Rank:** Ordinal;
         - **Company:** Nominal;
         - **Sector:** Nominal;
